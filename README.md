@@ -21,3 +21,7 @@ EXTREMES: greater than has rank > 30 and lesser than has rank < 10
 CENTER: greater than has 30 > rank > 20 and lesser than has 10 < rank < 20
 
 code for these datasets is [here](datasets.py)
+___
+
+A Comparator model is used to learn the ranking using $D_{comp}$. 
+This is treated as a supervised learning method. 
