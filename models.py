@@ -4,6 +4,10 @@ import torch.nn.functional as F
 
 
 class CNNbase(nn.Module):
+    """
+    A base feature extractor, params chosen assuming dimensions: batch x 3 x 64 x 64 
+    If other dimensions are used, it may not work out of the box
+    """
     def __init__(self):
         super().__init__()
         self.conv1 = nn.Conv2d(3, 10, kernel_size=5)
@@ -36,7 +40,7 @@ class Comparator(nn.Module):
 
     def forward(self, x_i, x_j):
         x = torch.cat([x_i, x_j], dim=1)
-        print(f"concatenated shape: {x.shape}")
+        # print(f"concatenated shape: {x.shape}")
         x = F.relu(self.fc1(x))
         x = self.fc1_drop(x)
         x = F.relu(self.fc2(x))

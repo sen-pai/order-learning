@@ -55,7 +55,7 @@ def get_comp_tuple(
     """
 
     if type == "equal":
-        one_hot = F.one_hot(torch.tensor(1), 3)
+        one_hot = 1
 
         assert index_i >= 0, "check index_i for type = equal"
         x_i = circle(fill_color=GREEN_COLORS[index_i][0])
@@ -64,13 +64,13 @@ def get_comp_tuple(
         return x_i, x_j, one_hot
 
     elif type == "greater":
-        one_hot = F.one_hot(torch.tensor(2), 3)
+        one_hot = 2
 
         assert index_i >= 0, "check index_i for type = greater"
         assert index_j >= 0, "check index_j for type = greater"
 
     elif type == "lesser":
-        one_hot = F.one_hot(torch.tensor(0), 3)
+        one_hot = 0
 
         assert index_i >= 0, "check index_i for type = lesser"
         assert index_j >= 0, "check index_j for type = lesser"
