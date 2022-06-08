@@ -43,7 +43,7 @@ def circle(
 
 def get_comp_tuple(
     type: str = "equal", index_i: int = -1, index_j: int = -1
-) -> Tuple[np.array, np.array, torch.tensor]:
+) -> Tuple[np.array, np.array, int]:
     """
     Args:
         type (str, ): three options for type = equal, greater, lesser. Defaults to "equal".
