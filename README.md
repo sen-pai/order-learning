@@ -32,6 +32,10 @@ Code for the models can be found [here](models.py)
 
 The training script is [here](color_gradient_training_script.py)
 
-After training with the EXTREME sampling scheme the model learns the following (Column names are: $x_i$, $x_j$, target, prediction) :
+After training with the EXTREME sampling scheme the model learns the following (Column names are: $x_i$, $x_j$, target, prediction)
+
+* 0 means $x_i \leq x_j$
+* 1 means $x_i \sim x_j$ 
+* 2 means $x_i \geq x_j$ 
 
 ![](experiments/simple_exp/plots/1.png)
