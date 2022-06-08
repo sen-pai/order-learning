@@ -26,3 +26,11 @@ ___
 A Comparator model is used to learn the ranking using $D_{comp}$. 
 This is treated as a supervised learning method. 
 ![](assets/comparator_diagram.png)
+
+Code for the models can be found [here](models.py)
+
+The training script is [here](color_gradient_training_script.py)
+
+After training with the EXTREME sampling scheme the model learns the following (Column names are: $x_i$, $x_j$, target, prediction) :
+
+![](experiments/simple_exp/plots/1.png)
